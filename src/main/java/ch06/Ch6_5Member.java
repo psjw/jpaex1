@@ -24,11 +24,11 @@ public class Ch6_5Member {
     @ManyToOne
     // 일대다 양방향 설정 -> 읽기전용으로 만듬
     @JoinColumn(name="TEAM_ID", insertable = false, updatable = false)
-    private Ch6_4Team team;
+    private Ch6_5Team team;
 
     @OneToOne
     @JoinColumn(name="LOCKER_ID")
-    private Ch6_4Locker locker;
+    private Ch6_5Locker locker;
 
     @ManyToMany
 //    @JoinTable(name = "Ch6_5MEMBER_PRODUCT") //만약 자동으로 생성하면 다른 값을 넣을수 없어서 엔티티로 생성한다
@@ -54,19 +54,19 @@ public class Ch6_5Member {
         this.username = username;
     }
 
-    public Ch6_4Team getTeam() {
+    public Ch6_5Team getTeam() {
         return team;
     }
 
-    public void setTeam(Ch6_4Team team) {
+    public void setTeam(Ch6_5Team team) {
         this.team = team;
     }
 
-    public Ch6_4Locker getLocker() {
+    public Ch6_5Locker getLocker() {
         return locker;
     }
 
-    public void setLocker(Ch6_4Locker locker) {
+    public void setLocker(Ch6_5Locker locker) {
         this.locker = locker;
     }
 
